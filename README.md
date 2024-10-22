@@ -29,6 +29,10 @@ Repository Structure
    - Purpose: This script narrows the search space by first performing an initial run, then shrinking the search domain based on the solution found, and finally conducting a more focused search.
    - Usage: Particularly useful for problems where a rough estimate of the solution can significantly reduce the search space, leading to faster convergence.
 
+5. feasibility_plot.py:
+   - Purpose: This subroutine will perform a series of studies along a load sweep, showing the feasible and non feasible domains of the stated problem. In other words: what is the load for which it is worth the extra effort of reinforcing the beam with a truss?
+   - Usage: change the problem "parameters" for different cases. Change the load lower and upper bound to make sure that both the feasible and unfeasible domains are contained in the sweep (which is confirmed by he intersection of the lines in the resulting plot).
+
 Important Considerations
 - Generations (G): The number of generations is a critical parameter that influences how well the algorithm converges. Experiment with this to balance between computational time and solution precision.
 - Mutation and Selection: These functions are hardcoded in the current implementation. To experiment with different strategies, youll need to modify the source code.
